@@ -7,7 +7,7 @@ on:
     
 jobs:
   laravel-tests:
-    runs-on: ubuntu 24.04.1 LTS
+    runs-on: ubuntu-latest
     services:
       mysql-service:
         # Docker Hub image (also with version)

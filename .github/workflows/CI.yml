@@ -33,10 +33,10 @@ jobs:
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
         run: composer update --lock
-      - name: Generate key
-        run: php artisan key:generate
       - name: Clear cache
         run: php artisan optimize:clear
+      - name: Generate key
+        run: php artisan key:generate
       - name: Migrate
         run: php artisan migrate
       - name: Directory Permissions

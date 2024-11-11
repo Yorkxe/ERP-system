@@ -25,6 +25,8 @@ jobs:
           --health-retries=3
     steps:
       - uses: actions/checkout@v4
+        with:
+          php-version: '8.2'
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
